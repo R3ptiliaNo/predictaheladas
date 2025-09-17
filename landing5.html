@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicta Helada | Protección Inteligente Contra Heladas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c6e49;
+            --secondary: #4c956c;
+            --accent: #fefee3;
+            --light: #f8f9fa;
+            --dark: #1d3557;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('media/image14.png') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .feature-box {
+            padding: 30px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .cta-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('media/image17.png') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .how-it-works-step {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Predicta Helada</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#problem">Problema</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#solution">Solución</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">Cómo Funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-4">No vuelva a perder una cosecha por una helada inesperada</h1>
+                    <p class="lead mb-4">Sistema de predicción de heladas más preciso y confiable de Argentina, directamente en su campo.</p>
+                    <a href="#contact" class="btn btn-primary btn-lg">Solicitar Asesoramiento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">La incertidumbre de una noche puede costar el trabajo de todo un año</h2>
+                    <p class="lead">Entre el 10% y el 30% de la producción agrícola mundial se pierde por heladas. En Argentina, donde la cadena agroindustrial representa el 20% del PBI, este problema tiene un impacto económico considerable.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <img src="1.png" alt="Daño por helada en cultivos" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <div class="ps-md-4">
+                        <h3 class="mb-4">Los métodos tradicionales no son suficientes</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas fa-exclamation-circle text-danger me-2"></i> Dependencia de pronósticos generales poco precisos</li>
+                            <li class="mb-3"><i class="fas fa-exclamation-circle text-danger me-2"></i> Activación tardía de sistemas de protección</li>
+                            <li class="mb-3"><i class="fas fa-exclamation-circle text-danger me-2"></i> Activación innecesaria que genera costos extras</li>
+                            <li class="mb-3"><i class="fas fa-exclamation-circle text-danger me-2"></i> Falta de datos específicos de su campo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Su campo tiene un microclima único. Nosotros se lo mostramos en tiempo real</h2>
+                    <p class="lead">Predicta Helada combina una red de sensores IoT, inteligencia artificial y algoritmos de predicción certificados para ofrecerle alertas precisas y oportunas.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <img src="2.png" alt="Red de sensores Predicta Helada" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-4">
+                        <h3 class="mb-4">Tecnología de punta para el campo argentino</h3>
+                        <p>Nuestra solución se basa en múltiples sensores IoT de vanguardia distribuidos en toda la topología del campo del cliente, capturando información en tiempo real.</p>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary p-2 rounded-circle me-3">
+                                <i class="fas fa-temperature-low text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Monitoreo integral</h5>
+                                <p class="mb-0">Temperatura, humedad, presión atmosférica, viento y más</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary p-2 rounded-circle me-3">
+                                <i class="fas fa-brain text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Algoritmos predictivos</h5>
+                                <p class="mb-0">IA y machine learning para predicciones precisas</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary p-2 rounded-circle me-3">
+                                <i class="fas fa-bell text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Alertas tempranas</h5>
+                                <p class="mb-0">Notificaciones por SMS y alarmas en campo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Cómo funciona nuestro sistema</h2>
+                    <p class="lead">Tres simples pasos para proteger su producción</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 how-it-works-step">
+                    <div class="step-number">1</div>
+                    <h4>Instalación</h4>
+                    <p>Nuestro equipo instala los sensores en puntos estratégicos de su campo para un monitoreo completo.</p>
+                    <img src="3.png" alt="Instalación de sensores" class="img-fluid mt-3 rounded">
+                </div>
+                <div class="col-md-4 how-it-works-step">
+                    <div class="step-number">2</div>
+                    <h4>Monitoreo</h4>
+                    <p>Los sensores recopilan datos en tiempo real y los envían al nodo principal para su análisis.</p>
+                    <img src="4.png" alt="Monitoreo de datos" class="img-fluid mt-3 rounded">
+                </div>
+                <div class="col-md-4 how-it-works-step">
+                    <div class="step-number">3</div>
+                    <h4>Alertas</h4>
+                    <p>Reciba notificaciones precisas con tiempo suficiente para activar sus sistemas de protección.</p>
+                    <img src="5.png" alt="Sistema de alertas" class="img-fluid mt-3 rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Beneficios de Predicta Helada</h2>
+                    <p class="lead">Protección avanzada para sus cultivos</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Protección avanzada</h4>
+                        <p>Reduzca hasta en un 90% los daños por heladas en sus cultivos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Ahorro de recursos</h4>
+                        <p>Active sus sistemas de protección solo cuando sea necesario, ahorrando agua y energía.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Mayor productividad</h4>
+                        <p>Maximice el rendimiento de sus cultivos con condiciones controladas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Monitoreo remoto</h4>
+                        <p>Acceda a los datos de su campo desde cualquier dispositivo con conexión a internet.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Historial de datos</h4>
+                        <p>Analice tendencias y mejore sus estrategias con datos históricos de su campo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Soporte técnico</h4>
+                        <p>Nuestro equipo de expertos le brinda asistencia permanente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                    <p class="lead">Agricultores que ya confían en Predicta Helada</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="6.png" alt="Cliente 1" class="testimonial-img">
+                            <div>
+                                <h5 class="mb-0">Carlos Méndez</h5>
+                                <p class="text-muted mb-0">Productor de frutillas, Mendoza</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Desde que implementamos Predicta Helada, hemos reducido nuestras pérdidas por heladas en un 85%. El sistema es incredibly preciso y nos ha permitido optimizar el uso de nuestros recursos."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="7.png" alt="Cliente 2" class="testimonial-img">
+                            <div>
+                                <h5 class="mb-0">Laura Rodríguez</h5>
+                                <p class="text-muted mb-0">Viñatera, Valle de Uco</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"La inversión en Predicta Helada se pagó sola en la primera temporada. Las alertas tempranas nos han permitido proteger nuestras vides en momentos críticos, salvando cosechas enteras."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">¿Listo para proteger sus cultivos?</h2>
+                    <p class="lead mb-5">Contáctenos hoy mismo para una evaluación gratuita de su campo</p>
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control-lg" placeholder="Nombre completo">
+                        </div>
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Correo electrónico">
+                        </div>
+                        <div class="col-md-8">
+                            <input type="tel" class="form-control form-control-lg" placeholder="Teléfono">
+                        </div>
+                        <div class="col-md-8">
+                            <textarea class="form-control form-control-lg" rows="3" placeholder="Cuéntenos sobre su campo"></textarea>
+                        </div>
+                        <div class="col-md-8">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Solicitar Asesoramiento</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4>Predicta Helada</h4>
+                    <p>Soluciones inteligentes de predicción de heladas para el campo argentino.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#problem" class="text-white">Problema</a></li>
+                        <li><a href="#solution" class="text-white">Solución</a></li>
+                        <li><a href="#how-it-works" class="text-white">Cómo funciona</a></li>
+                        <li><a href="#benefits" class="text-white">Beneficios</a></li>
+                        <li><a href="#testimonials" class="text-white">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Buenos Aires, Argentina</li>
+                        <li><i class="fas fa-phone me-2"></i> +54 11 2345-6789</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@predictahelada.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 Predicta Helada. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Una empresa del Grupo 9, Taller de Emprendedurismo en Innovación Digital</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
